@@ -1,9 +1,8 @@
+/* Estilos Base */
+
 * {
     max-width: 100%;
 }
-
-
-/* Estilos Base */
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
@@ -45,6 +44,31 @@ span {
     img {
         max-width: 100%; /* Ajuste para dispositivos pequeños */
     }
+
+    nav ul li a {
+        font-size: 0.5em; /* Cambiar el tamaño del texto */
+        padding: 8px 12px; /* Reducir el espacio alrededor de los enlaces */
+    }
+
+    nav ul {
+        flex-wrap: wrap; /* Permitir que los elementos se envuelvan en varias líneas */
+        justify-content: center; /* Centrar los elementos horizontalmente */
+    }
+
+    nav ul li {
+        flex: 0 0 50%; /* Ocupar la mitad del espacio en horizontal */
+        text-align: center; /* Centrar el texto dentro de cada elemento */
+    }
+}
+
+@media (max-width: 768px) {
+    th:nth-child(4), td:nth-child(4) { /* Ocultar la columna de Hora de Comienzo */
+        display: none;
+    }
+}
+
+#actividades table {
+    margin: 0 auto; /* Esto centra la tabla horizontalmente */
 }
 
 /* Enfoque visible */
