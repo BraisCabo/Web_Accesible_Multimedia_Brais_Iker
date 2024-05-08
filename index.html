@@ -30,11 +30,12 @@
         </section>
         <section id="videoSeccion">
             <h2 style="margin: 20px;">Explora Hyrule</h2>
-            <video id="video" controls>
+            <video id="video" controls aria-labelledby="videoDesc">
                 <source src="video/hyrule.mp4" type="video/mp4">
                 <track label="Español Subtítulos" kind="subtitles" srclang="es" src="video/subtitles.vtt">
                 <track label="Descripción en Español" kind="descriptions" srclang="es" src="video/subtitles.vtt">
             </video>
+            <div id="videoDesc" hidden>Video mostrando las hermosas vistas y principales atracciones de Hyrule, incluyendo panoramas naturales y actividades culturales.</div>
             <div>
                 <audio id="audioDescripcion" src="video/descripcion.mp3"></audio>
             </div>
@@ -125,7 +126,7 @@
             <img src="imagenes/gerudo.jpeg" alt="Aldea Gerudo en el desierto (durante el día)">
             <span>Aldea Gerudo en el desierto</span>
 
-            <img src="imagenes/lagonocturno.jpeg" >
+            <img src="imagenes/lagonocturno.jpeg" alt="Lago rodeado de montañas (durante la noche)">
             <span>Lago rodeado de montañas en la noche</span>
 
             <img src="imagenes/meseta.jpeg" alt="Meseta de Hyrule (durante el día)">
