@@ -34,7 +34,7 @@ document.querySelector("form").addEventListener("submit", function (event) {
   var nombre = document.getElementById("nombre").value; // Obtiene el nombre del input
   var email = document.getElementById("email").value; // Obtiene el email del input
   var postal = document.getElementById("postal").value; // Obtiene la postal seleccionada del select
-
+  var nombreDestinatario = document.getElementById("nombreDestinatario").value;
   // Construye un mensaje personalizado
   var mensaje =
     "Gracias " +
@@ -42,6 +42,8 @@ document.querySelector("form").addEventListener("submit", function (event) {
     ", tu postal de '" +
     postal +
     "' ha sido enviada a " +
+      nombreDestinatario +
+      " al email " +
     email +
     " !";
 
