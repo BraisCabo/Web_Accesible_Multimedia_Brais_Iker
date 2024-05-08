@@ -32,12 +32,15 @@
             <h2 style="margin: 20px;">Explora Hyrule</h2>
             <video id="video" controls aria-labelledby="videoDesc">
                 <source src="video/hyrule.mp4" type="video/mp4">
-                <track label="Español Subtítulos" kind="subtitles" srclang="es" src="video/subtitles.vtt">
-                <track label="Descripción en Español" kind="descriptions" srclang="es" src="video/subtitles.vtt">
+                <track label="Español Subtítulos" kind="captions" srclang="es" src="video/subtitles.vtt" />
+                <track label="Descripción en Español" kind="descriptions" srclang="es" src="video/subtitles.vtt" />
             </video>
-            <div id="videoDesc" hidden>Video mostrando las hermosas vistas y principales atracciones de Hyrule, incluyendo panoramas naturales y actividades culturales.</div>
+            <div id="videoDesc">Video mostrando las hermosas vistas y principales atracciones de Hyrule,
+                incluyendo panoramas naturales y actividades culturales.</div>
             <div>
-                <audio id="audioDescripcion" src="video/descripcion.mp3"></audio>
+                <audio id="audioDescripcion" src="video/descripcion.mp3" aria-labelledby="audioDescLabel"  aria-describedby="audioDescLabel"></audio>
+                <div id="audioDescLabel" hidden>Descripción auditiva del video que muestra los paisajes y actividades en
+                    Hyrule, proporcionando contexto y detalles visuales en formato de audio.</div>
             </div>
             <button aria-controls="audioDescripcion" onclick="toggleAudioDescription()" class="audioButton"
                 aria-label="Activar descripción por audio para el video">Activar
@@ -45,7 +48,8 @@
         </section>
         <section id="actividades">
             <h2 style="margin: 20px;">Actividades para realizar</h2>
-            <table aria-label="Actividades en Hyrule">
+            <table aria-describedby="descActividades">
+                <caption>Tabla de Actividades en Hyrule</caption>
                 <thead>
                     <tr>
                         <th>Actividad</th>
@@ -117,6 +121,11 @@
                     </tr>
                 </tbody>
             </table>
+            <div id="descActividades" hidden>
+                Esta tabla lista las actividades disponibles en Hyrule, incluyendo detalles sobre la ubicación, duración
+                y hora de comienzo de cada actividad. Cada actividad ofrece una experiencia única en distintos lugares
+                de Hyrule.
+            </div>
         </section>
         <section id="galeria">
             <h2 style="margin: 20px;">Galería de Imágenes</h2>
